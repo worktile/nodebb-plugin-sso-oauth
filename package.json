@@ -5,13 +5,14 @@
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/julianlam/nodebb-plugin-sso-oauth"
+    "url": "https://github.com/worktile/nodebb-plugin-sso-oauth-worktile"
   },
   "keywords": [
     "nodebb",
     "plugin",
     "oauth",
     "oauth2",
+    "worktile",
     "sso",
     "single sign on",
     "login",
@@ -23,7 +24,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/julianlam/nodebb-plugin-sso-oauth/issues"
+    "url": "https://github.com/worktile/nodebb-plugin-sso-oauth-worktile/issues"
   },
   "readme": "",
   "readmeFilename": "README.md",
