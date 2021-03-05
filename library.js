@@ -176,7 +176,7 @@
 		profile.id = data.id;
 		profile.displayName = data.displayName;
 		// [{ value: data.email }];
-		profile.emails = data.emails ? data.emails.map((e) => ({ value: e.value })) : { value: `${data.userName}@worktile.com` };
+		profile.emails = data.emails ? data.emails.map((e) => ({ value: e.value })) : [{ value: `${data.userName}@worktile.com` }];
 
 		// Do you want to automatically make somebody an admin? This line might help you do that...
 		// profile.isAdmin = data.isAdmin ? true : false;
