@@ -40,20 +40,6 @@
   "devDependencies": {
     "@commitlint/config-angular": "^8.3.4",
     "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.1",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.0.8"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
+    "eslint-plugin-import": "^2.20.1"
   }
 }
