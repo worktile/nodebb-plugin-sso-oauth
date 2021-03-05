@@ -112,6 +112,7 @@
 				// OAuth 2 options
 				opts = constants.oauth2;
 				opts.callbackURL = nconf.get('url') + '/auth/' + constants.name + '/callback';
+				opts.scope = 'profile';
 
 				passportOAuth.Strategy.prototype.userProfile = function (accessToken, done) {
 					this._oauth2.get(constants.userRoute, accessToken, function (err, body/* , res */) {
@@ -153,7 +154,7 @@
 				url: '/auth/' + constants.name,
 				callbackURL: '/auth/' + constants.name + '/callback',
 				icon: 'fa-check-square',
-				scope: (constants.scope || 'profile').split(','),
+				scope: (constants.scope || '').split(','),
 			});
 
 			callback(null, strategies);
