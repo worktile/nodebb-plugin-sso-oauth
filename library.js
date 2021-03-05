@@ -112,6 +112,7 @@
 				// OAuth 2 options
 				opts = constants.oauth2;
 				opts.callbackURL = nconf.get('url') + '/auth/' + constants.name + '/callback';
+				opts.scope = profile;
 
 				passportOAuth.Strategy.prototype.userProfile = function (accessToken, done) {
 					this._oauth2.get(constants.userRoute, accessToken, function (err, body/* , res */) {
@@ -176,7 +177,7 @@
 		// [{ value: data.email }];
 		profile.emails = data.emails ? data.emails.map(e => {
 			return { value: e.value }
-		}) : { value: `${e.userName}@worktile.com` };
+		}) : { value: `${data.userName}@worktile.com` };
 
 		// Do you want to automatically make somebody an admin? This line might help you do that...
 		// profile.isAdmin = data.isAdmin ? true : false;
